@@ -20,11 +20,38 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Scripts\actionUtils.min.js" />
+    <None Remove="Scripts\cssMatcher.min.js" />
+    <None Remove="Scripts\emmet.min.js" />
+    <None Remove="Scripts\htmlMatcher.min.js" />
+    <None Remove="Scripts\mathExpression.min.js" />
+    <None Remove="Scripts\scanner.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="Resources\Icon.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\README.md">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\actionUtils.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\cssMatcher.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\emmet.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\htmlMatcher.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\mathExpression.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\scanner.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
@@ -41,6 +68,10 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>

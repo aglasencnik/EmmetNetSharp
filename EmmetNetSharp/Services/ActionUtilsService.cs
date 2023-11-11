@@ -1,0 +1,36 @@
+﻿using EmmetNetSharp.Interfaces;
+using Jint;
+using System.IO;
+
+namespace EmmetNetSharp.Services
+{
+    /// <summary>
+    /// Represents the ActionUtilsService class.
+    /// </summary>
+    public class ActionUtilsService : IActionUtilsService
+    {
+        #region Fields
+
+        private readonly Engine _engine;
+
+        #endregion
+
+        #region Ctor
+
+        public ActionUtilsService()
+        {
+            _engine = new Engine();
+
+            var code = File.ReadAllText(Path.Combine(PackageDefaults.ScriptsFolderPath, PackageDefaults.ActionUtilsScriptPath));
+            _engine.Execute(code ?? string.Empty);
+        }
+
+        #endregion
+
+        #region Methods
+
+
+
+        #endregion
+    }
+}
