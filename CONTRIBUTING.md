@@ -1,10 +1,10 @@
-# Contributing to BlazoryVS
+# Contributing to EmmetNetSharp
 
-Thank you for your interest in contributing to BlazoryVS! We welcome contributions from the community to help make this project better.
+Thank you for your interest in contributing to EmmetNetSharp! We welcome contributions from the community to help make this project better.
 
 ## Reporting Issues
 
-If you encounter any issues while using BlazoryVS, please check the [issue tracker](https://github.com/aglasencnik/BlazoryVS/issues) to see if your issue has already been reported. If not, you can open a new issue with the following information:
+If you encounter any issues while using EmmetNetSharp, please check the [issue tracker](https://github.com/aglasencnik/EmmetNetSharp/issues) to see if your issue has already been reported. If not, you can open a new issue with the following information:
 
 - A clear and concise title.
 - A detailed description of the issue, including steps to reproduce it.
@@ -12,13 +12,13 @@ If you encounter any issues while using BlazoryVS, please check the [issue track
 
 ## Pull Requests
 
-We encourage you to contribute to BlazoryVS by submitting pull requests for bug fixes, improvements, or new features. Here's how to do it:
+We encourage you to contribute to EmmetNetSharp by submitting pull requests for bug fixes, improvements, or new features. Here's how to do it:
 
-1. Fork the [BlazoryVS repository](https://github.com/aglasencnik/BlazoryVS) on GitHub.
+1. Fork the [EmmetNetSharp repository](https://github.com/aglasencnik/EmmetNetSharp) on GitHub.
 2. Create a new branch for your changes: `git checkout -b feature-or-fix-name`.
 3. Make your changes and commit them with clear and concise messages.
 4. Push your changes to your fork: `git push origin feature-or-fix-name`.
-5. Create a pull request from your fork to the `main` branch of BlazoryVS.
+5. Create a pull request from your fork to the `main` branch of EmmetNetSharp.
 
 Please follow these guidelines when creating pull requests:
 
@@ -28,10 +28,10 @@ Please follow these guidelines when creating pull requests:
 
 ## Development Setup
 
-To set up a development environment for BlazoryVS, follow the instructions in the [README](https://github.com/aglasencnik/BlazoryVS/blob/master/README.md).
+To set up a development environment for EmmetNetSharp, follow the instructions in the [README](https://github.com/aglasencnik/EmmetNetSharp/blob/master/README.md).
 
 ## Code of Conduct
 
-Please review our [Code of Conduct](https://github.com/aglasencnik/BlazoryVS/blob/master/CODE_OF_CONDUCT.md) before participating in the BlazoryVS community.
+Please review our [Code of Conduct](https://github.com/aglasencnik/EmmetNetSharp/blob/master/CODE_OF_CONDUCT.md) before participating in the EmmetNetSharp community.
 
-We appreciate your contributions and look forward to working together to improve BlazoryVS!
+We appreciate your contributions and look forward to working together to improve EmmetNetSharp!
