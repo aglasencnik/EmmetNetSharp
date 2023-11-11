@@ -2,6 +2,45 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>0.0.1-alpha</Version>
+    <Title>EmmetNetSharp</Title>
+    <Authors>Amadej Glasenčnik</Authors>
+    <Description>EmmetNetSharp: Seamlessly integrate Emmet's HTML/CSS toolkit into your C# development with this powerful NuGet package. Elevate your coding efficiency and streamline web development in C#.</Description>
+    <Copyright>Copyright (c) Amadej Glasenčnik 2023.</Copyright>
+    <PackageProjectUrl>https://github.com/aglasencnik/EmmetNetSharp</PackageProjectUrl>
+    <PackageId>EmmetNetSharp</PackageId>
+    <PackageIcon>Resources\Icon.png</PackageIcon>
+    <RepositoryUrl>https://github.com/aglasencnik/EmmetNetSharp</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>Resources\README.md</PackageReadmeFile>
+    <PackageTags>CSS, HTML, Productivity, Snippets, Tools, Emmet, WebDevelopment</PackageTags>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\README.md">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Jint" Version="3.0.0-beta-2055" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\Icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="Resources\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
