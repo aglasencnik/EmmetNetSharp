@@ -5,4 +5,27 @@
 /// </summary>
 internal class HtmlTests
 {
+    #region Fields
+
+    private readonly ITestOutputHelper _output;
+
+    private readonly IActionUtilsService _actionUtilsService;
+
+    #endregion
+
+    #region Ctor
+
+    public HtmlTests(ITestOutputHelper output)
+    {
+        _output = output;
+        _actionUtilsService = new ActionUtilsService();
+    }
+
+    #endregion
+
+    #region Methods
+
+
+
+    #endregion
 }
