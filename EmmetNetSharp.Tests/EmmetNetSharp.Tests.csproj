@@ -17,16 +17,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="ActionUtils\sample.html">
+    <Content Include="Assets\actionUtilsSample.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="ActionUtils\sample.scss">
+    <Content Include="Assets\actionUtilsSample.scss">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="CssMatcher\sample.scss">
+    <Content Include="Assets\cssMatcherSample.scss">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="HtmlMatcher\sample.html">
+    <Content Include="Assets\htmlMatcherSample.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
