@@ -74,7 +74,7 @@ namespace EmmetNetSharp.Services
 
             try
             {
-                JsValue result = null;
+                JsValue result;
 
                 if (position is null)
                     result = _engine.Invoke("extract", text);
