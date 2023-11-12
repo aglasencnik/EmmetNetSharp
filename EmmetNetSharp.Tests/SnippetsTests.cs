@@ -3,29 +3,19 @@
 /// <summary>
 /// Represents a class that contains tests for snippet functionalities.
 /// </summary>
-internal class SnippetsTests
+public class SnippetsTests
 {
-    #region Fields
+    private readonly IAbbreviationService _abbreviationService = new AbbreviationService();
 
-    private readonly ITestOutputHelper _output;
-
-    private readonly IAbbreviationService _abbreviationService;
-
-    #endregion
-
-    #region Ctor
-
-    public SnippetsTests(ITestOutputHelper output)
+    [Fact]
+    public void Test_Html()
     {
-        _output = output;
-        _abbreviationService = new AbbreviationService();
+
     }
 
-    #endregion
+    [Fact]
+    public void Test_Xsl()
+    {
 
-    #region Methods
-
-
-
-    #endregion
+    }
 }

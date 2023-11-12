@@ -3,29 +3,19 @@
 /// <summary>
 /// Represents a class that contains tests for match html matcher functionality.
 /// </summary>
-internal class MatchTests
+public class MatchTests
 {
-    #region Fields
+    private readonly IHtmlMatcherService _htmlMatcherService = new HtmlMatcherService();
 
-    private readonly ITestOutputHelper _output;
-
-    private readonly IHtmlMatcherService _htmlMatcherService;
-
-    #endregion
-
-    #region Ctor
-
-    public MatchTests(ITestOutputHelper output)
+    [Fact]
+    public void Test_Html()
     {
-        _output = output;
-        _htmlMatcherService = new HtmlMatcherService();
+
     }
 
-    #endregion
+    [Fact]
+    public void Test_Xml()
+    {
 
-    #region Methods
-
-
-
-    #endregion
+    }
 }

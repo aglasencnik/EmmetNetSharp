@@ -3,29 +3,131 @@
 /// <summary>
 /// Represents a class that contains tests for formatter functionalities.
 /// </summary>
-internal class FormatTests
+public class FormatTests
 {
-    #region Fields
+    private readonly IAbbreviationService _abbreviationService = new AbbreviationService();
 
-    private readonly ITestOutputHelper _output;
+    #region HTML Tests
 
-    private readonly IAbbreviationService _abbreviationService;
-
-    #endregion
-
-    #region Ctor
-
-    public FormatTests(ITestOutputHelper output)
+    [Fact]
+    public void Test_HTML_Basic()
     {
-        _output = output;
-        _abbreviationService = new AbbreviationService();
+        
+    }
+
+    [Fact]
+    public void Test_HTML_InlineElements()
+    {
+
+    }
+
+    [Fact]
+    public void Test_HTML_GenerateFields()
+    {
+
+    }
+
+    [Fact]
+    public void Test_HTML_MixedContent()
+    {
+
+    }
+
+    [Fact]
+    public void Test_HTML_SelfClosing()
+    {
+
+    }
+
+    [Fact]
+    public void Test_HTML_BooleanAttributes()
+    {
+
+    }
+
+    [Fact]
+    public void Test_HTML_NoFormatting()
+    {
+
+    }
+
+    [Fact]
+    public void Test_HTML_FormatSpecificNodes()
+    {
+
+    }
+
+    [Fact]
+    public void Test_HTML_Comment()
+    {
+
     }
 
     #endregion
 
-    #region Methods
+    #region HAML Tests
 
+    [Fact]
+    public void Test_HAML_Basic()
+    {
 
+    }
+
+    [Fact]
+    public void Test_HAML_NodesWithText()
+    {
+
+    }
+
+    [Fact]
+    public void Test_HAML_GenerateFields()
+    {
+
+    }
+
+    #endregion
+
+    #region PUG Tests
+
+    [Fact]
+    public void Test_PUG_Basic()
+    {
+
+    }
+
+    [Fact]
+    public void Test_PUG_NodesWithText()
+    {
+
+    }
+
+    [Fact]
+    public void Test_PUG_GenerateFields()
+    {
+
+    }
+
+    #endregion
+
+    #region Slim Tests
+
+    [Fact]
+    public void Test_Slim_Basic()
+    {
+
+    }
+
+    [Fact]
+    public void Test_Slim_NodesWithText()
+    {
+
+    }
+
+    [Fact]
+    public void Test_Slim_GenerateFields()
+    {
+
+    }
 
     #endregion
 }

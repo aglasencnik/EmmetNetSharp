@@ -3,29 +3,19 @@
 /// <summary>
 /// Represents a class that contains tests for lorem ipsum functionalities.
 /// </summary>
-internal class LoremTests
+public class LoremTests
 {
-    #region Fields
+    private readonly IAbbreviationService _abbreviationService = new AbbreviationService();
 
-    private readonly ITestOutputHelper _output;
-    
-    private readonly IAbbreviationService _abbreviationService;
-
-    #endregion
-
-    #region Ctor
-
-    public LoremTests(ITestOutputHelper output)
+    [Fact]
+    public void Test_Single()
     {
-        _output = output;
-        _abbreviationService = new AbbreviationService();
+
     }
 
-    #endregion
+    [Fact]
+    public void Test_Multiple()
+    {
 
-    #region Methods
-
-
-
-    #endregion
+    }
 }

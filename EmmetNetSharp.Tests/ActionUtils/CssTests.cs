@@ -3,29 +3,31 @@
 /// <summary>
 /// Represents a class that contains tests for CSS action utils functionality.
 /// </summary>
-internal class CssTests
+public class CssTests
 {
-    #region Fields
+    private readonly IActionUtilsService _actionUtilsService = new ActionUtilsService();
 
-    private readonly ITestOutputHelper _output;
-
-    private readonly IActionUtilsService _actionUtilsService;
-
-    #endregion
-
-    #region Ctor
-
-    public CssTests(ITestOutputHelper output)
+    [Fact]
+    public void Test_SelectNextItem()
     {
-        _output = output;
-        _actionUtilsService = new ActionUtilsService();
+
     }
 
-    #endregion
+    [Fact]
+    public void Test_SelectPreviousItem()
+    {
 
-    #region Methods
+    }
 
+    [Fact]
+    public void Test_GetSection()
+    {
 
+    }
 
-    #endregion
+    [Fact]
+    public void Test_GetSectionWithProps()
+    {
+
+    }
 }

@@ -3,29 +3,61 @@
 /// <summary>
 /// Represents a class that contains tests for extract abbreviation functionalities.
 /// </summary>
-internal class ExtractAbbreviationTests
+public class ExtractAbbreviationTests
 {
-    #region Fields
+    private readonly IAbbreviationService _abbreviationService = new AbbreviationService();
 
-    private readonly ITestOutputHelper _output;
-
-    private readonly IAbbreviationService _abbreviationService;
-
-    #endregion
-
-    #region Ctor
-
-    public ExtractAbbreviationTests(ITestOutputHelper output)
+    [Fact]
+    public void Test_Basic()
     {
-        _output = output;
-        _abbreviationService = new AbbreviationService();
+
     }
 
-    #endregion
+    [Fact]
+    public void Test_AbbreviationWithOperators()
+    {
 
-    #region Methods
+    }
 
+    [Fact]
+    public void Test_AbbreviationWithAttributes()
+    {
 
+    }
 
-    #endregion
+    [Fact]
+    public void Test_Tag()
+    {
+
+    }
+
+    [Fact]
+    public void Test_StylesheetAbbreviation()
+    {
+
+    }
+
+    [Fact]
+    public void Test_PrefixedExtract()
+    {
+
+    }
+
+    [Fact]
+    public void Test_BracketsInsideCurlyBraces()
+    {
+
+    }
+
+    [Fact]
+    public void Test_Html()
+    {
+
+    }
+
+    [Fact]
+    public void Test_ConsumeQuotes()
+    {
+
+    }
 }

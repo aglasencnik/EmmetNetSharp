@@ -3,29 +3,55 @@
 /// <summary>
 /// Represents a class that contains tests for scanner functionalities.
 /// </summary>
-internal class ScannerTests
+public class ScannerTests
 {
-    #region Fields
+    private readonly IScannerService _scannerService = new ScannerService();
 
-    private readonly ITestOutputHelper _output;
-
-    private readonly IScannerService _scannerService;
-
-    #endregion
-
-    #region Ctor
-
-    public ScannerTests(ITestOutputHelper output)
+    [Fact]
+    public void Test_Basics()
     {
-        _output = output;
-        _scannerService = new ScannerService();
+
     }
 
-    #endregion
+    [Fact]
+    public void Test_LimitRange()
+    {
 
-    #region Methods
+    }
 
+    [Fact]
+    public void Test_Eat()
+    {
 
+    }
 
-    #endregion
+    [Fact]
+    public void Test_EatWithQuotes()
+    {
+
+    }
+
+    [Fact]
+    public void Test_EathQuoted()
+    {
+
+    }
+
+    [Fact]
+    public void Test_EatInvalid()
+    {
+
+    }
+
+    [Fact]
+    public void Test_InvalidStrings()
+    {
+
+    }
+
+    [Fact]
+    public void Test_HandleEscapes()
+    {
+
+    }
 }

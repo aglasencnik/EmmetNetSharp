@@ -3,29 +3,34 @@
 /// <summary>
 /// Represents a class that contains tests for extractor math expressions functionality.
 /// </summary>
-internal class ExtractTests
+public class ExtractTests
 {
-    #region Fields
+    private readonly IMathExpressionService _mathExpressionService = new MathExpressionService();
 
-    private readonly ITestOutputHelper _output;
-
-    private readonly IMathExpressionService _mathExpressionService;
-
-    #endregion
-
-    #region Ctor
-
-    public ExtractTests(ITestOutputHelper output)
+    [Fact]
+    public void Test_Basic()
     {
-        _output = output;
-        _mathExpressionService = new MathExpressionService();
+        Assert.Equal((0, 1), _mathExpressionService.Extract("1"));
+        Assert.Equal((0, 2), _mathExpressionService.Extract("10"));
+        Assert.Equal((0, 3), _mathExpressionService.Extract("123"));
+        Assert.Equal((0, 3), _mathExpressionService.Extract("0.1"));
+        Assert.Equal((0, 2), _mathExpressionService.Extract(".1"));
+        Assert.Equal((0, 4), _mathExpressionService.Extract(".123"));
+
+        // Mixed content
+        Assert.Equal((3, 6), _mathExpressionService.Extract("foo123"));
+        Assert.Equal((3, 6), _mathExpressionService.Extract(".1.2.3"));
+        Assert.Equal((2, 5), _mathExpressionService.Extract("1.2.3"));
+        Assert.Equal((3, 14), _mathExpressionService.Extract("foo2 * (3 + 1)"));
+        Assert.Equal((4, 17), _mathExpressionService.Extract("bar.(2 * (3 + 1))"));
+        Assert.Equal((6, 9), _mathExpressionService.Extract("test: 1+2"));
     }
 
-    #endregion
-
-    #region Methods
-
-
-
-    #endregion
+    [Fact]
+    public void Test_LookAhead()
+    {
+        Assert.Equal((3, 14), _mathExpressionService.Extract("foo2 * (3 + 1)", 13));
+        Assert.Equal((4, 17), _mathExpressionService.Extract("bar.(2 * (3 + 1))", 15));
+        Assert.Equal((4, 18), _mathExpressionService.Extract("bar.(2 * (3 + 1) )", 15));
+    }
 }

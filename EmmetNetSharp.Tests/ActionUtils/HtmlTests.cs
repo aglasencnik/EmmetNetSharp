@@ -3,29 +3,25 @@
 /// <summary>
 /// Represents a class that contains tests for HTML action utils functionality.
 /// </summary>
-internal class HtmlTests
+public class HtmlTests
 {
-    #region Fields
+    private readonly IActionUtilsService _actionUtilsService = new ActionUtilsService();
 
-    private readonly ITestOutputHelper _output;
-
-    private readonly IActionUtilsService _actionUtilsService;
-
-    #endregion
-
-    #region Ctor
-
-    public HtmlTests(ITestOutputHelper output)
+    [Fact]
+    public void Test_SelectNextItem()
     {
-        _output = output;
-        _actionUtilsService = new ActionUtilsService();
+
     }
 
-    #endregion
+    [Fact]
+    public void Test_SelectPreviousItem()
+    {
 
-    #region Methods
+    }
 
+    [Fact]
+    public void Test_GetOpenTag()
+    {
 
-
-    #endregion
+    }
 }

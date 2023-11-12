@@ -3,29 +3,19 @@
 /// <summary>
 /// Represents a class that contains tests for balance html matcher functionality.
 /// </summary>
-internal class BalanceTests
+public class BalanceTests
 {
-    #region Fields
+    private readonly IHtmlMatcherService _htmlMatcherService = new HtmlMatcherService();
 
-    private readonly ITestOutputHelper _output;
-
-    private readonly IHtmlMatcherService _htmlMatcherService;
-
-    #endregion
-
-    #region Ctor
-
-    public BalanceTests(ITestOutputHelper output)
+    [Fact]
+    public void Test_Outward()
     {
-        _output = output;
-        _htmlMatcherService = new HtmlMatcherService();
+
     }
 
-    #endregion
+    [Fact]
+    public void Test_Inward()
+    {
 
-    #region Methods
-
-
-
-    #endregion
+    }
 }

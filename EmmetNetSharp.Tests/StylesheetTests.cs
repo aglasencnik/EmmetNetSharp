@@ -3,29 +3,97 @@
 /// <summary>
 /// Represents a class that contains tests for stylesheet functionalities.
 /// </summary>
-internal class StylesheetTests
+public class StylesheetTests
 {
-    #region Fields
+    private readonly IAbbreviationService _abbreviationService = new AbbreviationService();
 
-    private readonly ITestOutputHelper _output;
-
-    private readonly IAbbreviationService _abbreviationService;
-
-    #endregion
-
-    #region Ctor
-
-    public StylesheetTests(ITestOutputHelper output)
+    [Fact]
+    public void Test_CompareScores()
     {
-        _output = output;
-        _abbreviationService = new AbbreviationService();
+
     }
 
-    #endregion
+    [Fact]
+    public void Test_PickPaddingOrPosition()
+    {
 
-    #region Methods
+    }
 
+    [Fact]
+    public void Test_Keyword()
+    {
 
+    }
 
-    #endregion
+    [Fact]
+    public void Test_Numeric()
+    {
+
+    }
+
+    [Fact]
+    public void Test_NumericWithFormat()
+    {
+
+    }
+
+    [Fact]
+    public void Test_Important()
+    {
+
+    }
+
+    [Fact]
+    public void Test_Color()
+    {
+
+    }
+
+    [Fact]
+    public void Test_Snippets()
+    {
+
+    }
+
+    [Fact]
+    public void Test_MultipleProperties()
+    {
+
+    }
+
+    [Fact]
+    public void Test_Functions()
+    {
+
+    }
+
+    [Fact]
+    public void Test_CaseInsensitiveMatch()
+    {
+
+    }
+
+    [Fact]
+    public void Test_GradientResolver()
+    {
+
+    }
+
+    [Fact]
+    public void Test_CssInJs()
+    {
+
+    }
+
+    [Fact]
+    public void Test_ResolveContextValue()
+    {
+
+    }
+
+    [Fact]
+    public void Test_LimitSnippetsByScope()
+    {
+
+    }
 }

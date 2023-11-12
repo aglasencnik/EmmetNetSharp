@@ -3,29 +3,19 @@
 /// <summary>
 /// Represents a class that contains tests for balance css matcher functionality.
 /// </summary>
-internal class BalanceTests
+public class BalanceTests
 {
-    #region Fields
+    private readonly ICssMatcherService _cssMatcherService = new CssMatcherService();
 
-    private readonly ITestOutputHelper _output;
-
-    private readonly ICssMatcherService _cssMatcherService;
-
-    #endregion
-
-    #region Ctor
-
-    public BalanceTests(ITestOutputHelper output)
+    [Fact]
+    public void Test_Outward()
     {
-        _output = output;
-        _cssMatcherService = new CssMatcherService();
+
     }
 
-    #endregion
+    [Fact]
+    public void Test_Inward()
+    {
 
-    #region Methods
-
-
-
-    #endregion
+    }
 }

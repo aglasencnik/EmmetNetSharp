@@ -3,29 +3,91 @@
 /// <summary>
 /// Represents a class that contains tests for expander functionalities.
 /// </summary>
-internal class ExpandTests
+public class ExpandTests
 {
-    #region Fields
+    private readonly IAbbreviationService _abbreviationService = new AbbreviationService();
 
-    private readonly ITestOutputHelper _output;
-
-    private readonly IAbbreviationService _abbreviationService;
-
-    #endregion
-
-    #region Ctor
-
-    public ExpandTests(ITestOutputHelper output)
+    [Fact]
+    public void Test_Basic()
     {
-        _output = output;
-        _abbreviationService = new AbbreviationService();
+
     }
 
-    #endregion
+    [Fact]
+    public void Test_Abbreviations()
+    {
 
-    #region Methods
+    }
 
+    [Fact]
+    public void Test_Expressions()
+    {
 
+    }
 
-    #endregion
+    [Fact]
+    public void Test_Numbering()
+    {
+
+    }
+
+    [Fact]
+    public void Test_Syntax()
+    {
+
+    }
+
+    [Fact]
+    public void Test_CustomProfile()
+    {
+
+    }
+
+    [Fact]
+    public void Test_CustomVariables()
+    {
+
+    }
+
+    [Fact]
+    public void Test_CustomSnippets()
+    {
+
+    }
+
+    [Fact]
+    public void Test_FormatterOptions()
+    {
+
+    }
+
+    [Fact]
+    public void Test_JSX()
+    {
+
+    }
+
+    [Fact]
+    public void Test_OverrideAttributes()
+    {
+
+    }
+
+    [Fact]
+    public void Test_WrapWithAbbreviation()
+    {
+
+    }
+
+    [Fact]
+    public void Test_ClassNames()
+    {
+
+    }
+
+    [Fact]
+    public void Test_Pug_Basics()
+    {
+
+    }
 }

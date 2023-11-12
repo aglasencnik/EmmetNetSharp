@@ -3,29 +3,13 @@
 /// <summary>
 /// Represents a class that contains tests for attributes html matcher functionality.
 /// </summary>
-internal class AttributesTests
+public class AttributesTests
 {
-    #region Fields
+    private readonly IHtmlMatcherService _htmlMatcherService = new HtmlMatcherService();
 
-    private readonly ITestOutputHelper _output;
-
-    private readonly IHtmlMatcherService _htmlMatcherService;
-
-    #endregion
-
-    #region Ctor
-
-    public AttributesTests(ITestOutputHelper output)
+    [Fact]
+    public void Test_ParseAttributeString()
     {
-        _output = output;
-        _htmlMatcherService = new HtmlMatcherService();
+
     }
-
-    #endregion
-
-    #region Methods
-
-
-
-    #endregion
 }

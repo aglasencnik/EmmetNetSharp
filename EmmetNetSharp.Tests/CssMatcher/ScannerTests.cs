@@ -1,20 +1,26 @@
 ﻿namespace EmmetNetSharp.Tests.CssMatcher;
 
 /// <summary>
-/// Represents a class that contains tests for match css matcher functionality.
+/// Represents a class that contains tests for scanner css matcher functionality.
 /// </summary>
-public class MatchTests
+public class ScannerTests
 {
     private readonly ICssMatcherService _cssMatcherService = new CssMatcherService();
 
     [Fact]
-    public void Test_MatchSelector()
+    public void Test_Selectors()
     {
 
     }
 
     [Fact]
     public void Test_Property()
+    {
+
+    }
+
+    [Fact]
+    public void Test_PseudoSelectors()
     {
 
     }

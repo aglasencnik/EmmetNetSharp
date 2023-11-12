@@ -3,29 +3,49 @@
 /// <summary>
 /// Represents a class that contains tests for markup functionalities.
 /// </summary>
-internal class MarkupTests
+public class MarkupTests
 {
-    #region Fields
+    private readonly IAbbreviationService _abbreviationService = new AbbreviationService();
 
-    private readonly ITestOutputHelper _output;
-
-    private readonly IAbbreviationService _abbreviationService;
-
-    #endregion
-
-    #region Ctor
-
-    public MarkupTests(ITestOutputHelper output)
+    [Fact]
+    public void Test_ImplicitTags()
     {
-        _output = output;
-        _abbreviationService = new AbbreviationService();
+
     }
 
-    #endregion
+    [Fact]
+    public void Test_Xsl()
+    {
 
-    #region Methods
+    }
 
+    [Fact]
+    public void Test_BEM_Modifiers()
+    {
 
+    }
 
-    #endregion
+    [Fact]
+    public void Test_BEM_Elements()
+    {
+
+    }
+
+    [Fact]
+    public void Test_BEM_CustomizeModifier()
+    {
+
+    }
+
+    [Fact]
+    public void Test_BEM_MultipleClasses()
+    {
+
+    }
+
+    [Fact]
+    public void Test_BEM_ParentContext()
+    {
+
+    }
 }
