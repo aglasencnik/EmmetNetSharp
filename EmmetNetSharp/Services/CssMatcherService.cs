@@ -45,7 +45,7 @@ namespace EmmetNetSharp.Services
         /// <exception cref="ArgumentNullException">Thrown when the input 'source' is null, empty, or consists only of white-space characters.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the 'position' argument is less than 0.</exception>
         /// <exception cref="Exception">Thrown when an error occurs during the matching process. The inner exception contains more details about the error.</exception>
-        public CssMatchResult Match(string source, int position)
+        public virtual CssMatchResult Match(string source, int position)
         {
             if (string.IsNullOrWhiteSpace(source))
                 throw new ArgumentNullException(nameof(source));
@@ -88,7 +88,7 @@ namespace EmmetNetSharp.Services
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the 'position' argument is less than 0.</exception>
         /// <exception cref="Exception">Thrown when an error occurs during the balancing process. The inner exception contains more details about the error.</exception>
         /// <exception cref="NotImplementedException">Thrown if the method is not implemented or is not functional in the current context.</exception>
-        public (int, int)[] BalanceInward(string source, int position)
+        public virtual (int, int)[] BalanceInward(string source, int position)
         {
             if (string.IsNullOrWhiteSpace(source))
                 throw new ArgumentNullException(nameof(source));
@@ -131,7 +131,7 @@ namespace EmmetNetSharp.Services
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the 'position' argument is less than 0.</exception>
         /// <exception cref="Exception">Thrown when an error occurs during the outward balancing process. The inner exception contains more details about the error.</exception>
         /// <exception cref="NotImplementedException">Thrown if the method is not implemented or is not functional in the current context.</exception>
-        public (int, int)[] BalanceOutward(string source, int position)
+        public virtual (int, int)[] BalanceOutward(string source, int position)
         {
             if (string.IsNullOrWhiteSpace(source))
                 throw new ArgumentNullException(nameof(source));
@@ -173,7 +173,7 @@ namespace EmmetNetSharp.Services
         /// <exception cref="ArgumentNullException">Thrown when the input 'source' is null, empty, or consists only of white-space characters.</exception>
         /// <exception cref="Exception">Thrown when an error occurs during the scanning process. The inner exception contains more details about the error.</exception>
         /// <exception cref="NotImplementedException">Thrown if the method is not implemented or is not functional in the current context.</exception>
-        public (string, int, int, int)[] Scan(string source)
+        public virtual (string, int, int, int)[] Scan(string source)
         {
             if (string.IsNullOrWhiteSpace(source))
                 throw new ArgumentNullException(nameof(source));
@@ -213,7 +213,7 @@ namespace EmmetNetSharp.Services
         /// <returns>An array of tuples, where each tuple contains two integers representing a segment of the split string. Returns null if the split cannot be performed, or if the resulting segments are undefined or invalid.</returns>
         /// <exception cref="ArgumentNullException">Thrown when the input 'value' is null, empty, or consists only of white-space characters.</exception>
         /// <exception cref="Exception">Thrown when an error occurs during the splitting process. The inner exception contains more details about the error.</exception>
-        public (int, int)[] SplitValue(string value, int? offset = null)
+        public virtual (int, int)[] SplitValue(string value, int? offset = null)
         {
             if (string.IsNullOrWhiteSpace(value))
                 throw new ArgumentNullException(nameof(value));
