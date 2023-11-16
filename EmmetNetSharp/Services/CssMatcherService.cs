@@ -87,7 +87,6 @@ namespace EmmetNetSharp.Services
         /// <exception cref="ArgumentNullException">Thrown when the input 'source' is null, empty, or consists only of white-space characters.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the 'position' argument is less than 0.</exception>
         /// <exception cref="Exception">Thrown when an error occurs during the balancing process. The inner exception contains more details about the error.</exception>
-        /// <exception cref="NotImplementedException">Thrown if the method is not implemented or is not functional in the current context.</exception>
         public virtual (int, int)[] BalanceInward(string source, int position)
         {
             if (string.IsNullOrWhiteSpace(source))
@@ -116,8 +115,6 @@ namespace EmmetNetSharp.Services
             {
                 throw new Exception("Error balancing CSS.", ex);
             }
-
-            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -130,7 +127,6 @@ namespace EmmetNetSharp.Services
         /// <exception cref="ArgumentNullException">Thrown when the input 'source' is null, empty, or consists only of white-space characters.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the 'position' argument is less than 0.</exception>
         /// <exception cref="Exception">Thrown when an error occurs during the outward balancing process. The inner exception contains more details about the error.</exception>
-        /// <exception cref="NotImplementedException">Thrown if the method is not implemented or is not functional in the current context.</exception>
         public virtual (int, int)[] BalanceOutward(string source, int position)
         {
             if (string.IsNullOrWhiteSpace(source))
@@ -159,8 +155,6 @@ namespace EmmetNetSharp.Services
             {
                 throw new Exception("Error balancing CSS.", ex);
             }
-
-            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -172,13 +166,12 @@ namespace EmmetNetSharp.Services
         /// <returns>An array of tuples, where each tuple contains a string representing the segment type, and three integers representing the start position, end position, and a delimiter value for each identified segment.</returns>
         /// <exception cref="ArgumentNullException">Thrown when the input 'source' is null, empty, or consists only of white-space characters.</exception>
         /// <exception cref="Exception">Thrown when an error occurs during the scanning process. The inner exception contains more details about the error.</exception>
-        /// <exception cref="NotImplementedException">Thrown if the method is not implemented or is not functional in the current context.</exception>
         public virtual (string, int, int, int)[] Scan(string source)
         {
             if (string.IsNullOrWhiteSpace(source))
                 throw new ArgumentNullException(nameof(source));
 
-            var _scanResults = new List<(string, int, int, int)>();
+            var scanResults = new List<(string, int, int, int)>();
 
             Action<JsValue, JsValue, JsValue, JsValue> scanCallback = (type, start, end, delimiter) =>
             {
@@ -187,21 +180,19 @@ namespace EmmetNetSharp.Services
                 var endInt = (int)end.AsNumber();
                 var delimiterInt = (int)delimiter.AsNumber();
 
-                _scanResults.Add((typeStr, startInt, endInt, delimiterInt));
+                scanResults.Add((typeStr, startInt, endInt, delimiterInt));
             };
 
             try
             {
                 _engine.Invoke("scan", source, scanCallback);
 
-                return _scanResults.ToArray();
+                return scanResults.ToArray();
             }
             catch (Exception ex)
             {
                 throw new Exception("Error during CSS scanning.", ex);
             }
-
-            throw new NotImplementedException();
         }
 
         /// <summary>

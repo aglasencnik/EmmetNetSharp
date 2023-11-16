@@ -29,7 +29,6 @@ namespace EmmetNetSharp.Interfaces
         /// <exception cref="ArgumentNullException">Thrown when the input 'source' is null, empty, or consists only of white-space characters.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the 'position' argument is less than 0.</exception>
         /// <exception cref="Exception">Thrown when an error occurs during the balancing process. The inner exception contains more details about the error.</exception>
-        /// <exception cref="NotImplementedException">Thrown if the method is not implemented or is not functional in the current context.</exception>
         (int, int)[] BalanceInward(string source, int position);
 
         /// <summary>
@@ -42,7 +41,6 @@ namespace EmmetNetSharp.Interfaces
         /// <exception cref="ArgumentNullException">Thrown when the input 'source' is null, empty, or consists only of white-space characters.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the 'position' argument is less than 0.</exception>
         /// <exception cref="Exception">Thrown when an error occurs during the outward balancing process. The inner exception contains more details about the error.</exception>
-        /// <exception cref="NotImplementedException">Thrown if the method is not implemented or is not functional in the current context.</exception>
         (int, int)[] BalanceOutward(string source, int position);
 
         /// <summary>
@@ -54,7 +52,6 @@ namespace EmmetNetSharp.Interfaces
         /// <returns>An array of tuples, where each tuple contains a string representing the segment type, and three integers representing the start position, end position, and a delimiter value for each identified segment.</returns>
         /// <exception cref="ArgumentNullException">Thrown when the input 'source' is null, empty, or consists only of white-space characters.</exception>
         /// <exception cref="Exception">Thrown when an error occurs during the scanning process. The inner exception contains more details about the error.</exception>
-        /// <exception cref="NotImplementedException">Thrown if the method is not implemented or is not functional in the current context.</exception>
         (string, int, int, int)[] Scan(string source);
 
         /// <summary>
