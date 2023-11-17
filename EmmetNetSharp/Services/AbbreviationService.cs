@@ -1,5 +1,6 @@
 ﻿using EmmetNetSharp.Interfaces;
 using Jint;
+using System;
 using System.IO;
 
 namespace EmmetNetSharp.Services
@@ -29,7 +30,50 @@ namespace EmmetNetSharp.Services
 
         #region Methods
 
+        public virtual object ExpandAbbreviation()
+        {
+            throw new NotImplementedException();
+        }
 
+        public virtual object ExtractAbbreviation()
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual object ExpandMarkupAbbreviation()
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual object ExpandStylesheetAbbreviation()
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual object ParseMarkup()
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual object ParseStylesheet()
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual object ParseStylesheetSnippets()
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual object StringifyMarkup()
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual object StringifyStylesheet()
+        {
+            throw new NotImplementedException();
+        }
 
         #endregion
     }
