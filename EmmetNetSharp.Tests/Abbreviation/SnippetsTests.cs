@@ -1,20 +1,20 @@
 ﻿namespace EmmetNetSharp.Tests.Abbreviation;
 
 /// <summary>
-/// Represents a class that contains tests for html tokenizer abbreviation functionality.
+/// Represents a class that contains tests for snippet functionalities.
 /// </summary>
-public class HtmlTokenizerTests
+public class SnippetsTests
 {
     private readonly IAbbreviationService _abbreviationService = new AbbreviationService();
 
     [Fact]
-    public void Test_BasicAbbreviations()
+    public void Test_Html()
     {
 
     }
 
     [Fact]
-    public void Test_Repeater()
+    public void Test_Xsl()
     {
 
     }

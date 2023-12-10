@@ -1,4 +1,4 @@
-﻿namespace EmmetNetSharp.Tests;
+﻿namespace EmmetNetSharp.Tests.Abbreviation;
 
 /// <summary>
 /// Represents a class that contains tests for formatter functionalities.
@@ -12,7 +12,7 @@ public class FormatTests
     [Fact]
     public void Test_HTML_Basic()
     {
-        
+
     }
 
     [Fact]

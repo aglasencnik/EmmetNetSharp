@@ -1,4 +1,4 @@
-﻿namespace EmmetNetSharp.Tests;
+﻿namespace EmmetNetSharp.Tests.Abbreviation;
 
 /// <summary>
 /// Represents a class that contains tests for markup functionalities.
