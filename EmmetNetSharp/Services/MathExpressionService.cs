@@ -45,7 +45,7 @@ namespace EmmetNetSharp.Services
 
             try
             {
-                var result = _engine.Invoke("evaluate", expression);
+                var result = _engine.Invoke("emmetEvaluate", expression);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;
@@ -77,9 +77,9 @@ namespace EmmetNetSharp.Services
                 JsValue result;
 
                 if (position is null)
-                    result = _engine.Invoke("extract", text);
+                    result = _engine.Invoke("emmetExtract", text);
                 else
-                    result = _engine.Invoke("extract", text, position);
+                    result = _engine.Invoke("emmetExtract", text, position);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;

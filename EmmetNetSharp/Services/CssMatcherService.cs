@@ -55,7 +55,7 @@ namespace EmmetNetSharp.Services
 
             try
             {
-                var result = _engine.Invoke("match", source, position);
+                var result = _engine.Invoke("emmetMatch", source, position);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;
@@ -97,7 +97,7 @@ namespace EmmetNetSharp.Services
 
             try
             {
-                var result = _engine.Invoke("balancedInward", source, position);
+                var result = _engine.Invoke("emmetBalancedInward", source, position);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;
@@ -137,7 +137,7 @@ namespace EmmetNetSharp.Services
 
             try
             {
-                var result = _engine.Invoke("balancedOutward", source, position);
+                var result = _engine.Invoke("emmetBalancedOutward", source, position);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;
@@ -185,7 +185,7 @@ namespace EmmetNetSharp.Services
 
             try
             {
-                _engine.Invoke("scan", source, scanCallback);
+                _engine.Invoke("emmetScan", source, scanCallback);
 
                 return scanResults.ToArray();
             }
@@ -214,9 +214,9 @@ namespace EmmetNetSharp.Services
                 JsValue result;
 
                 if (offset is null)
-                    result = _engine.Invoke("splitValue", value);
+                    result = _engine.Invoke("emmetSplitValue", value);
                 else
-                    result = _engine.Invoke("splitValue", value, offset);
+                    result = _engine.Invoke("emmetSplitValue", value, offset);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;

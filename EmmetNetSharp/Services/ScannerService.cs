@@ -51,13 +51,13 @@ namespace EmmetNetSharp.Services
                 JsValue result;
 
                 if (from == null && to == null)
-                    result = _engine.Invoke("isAlpha", code);
+                    result = _engine.Invoke("emmetIsAlpha", code);
                 else if (from != null && to == null)
-                    result = _engine.Invoke("isAlpha", code, from);
+                    result = _engine.Invoke("emmetIsAlpha", code, from);
                 else if (from == null && to != null)
-                    result = _engine.Invoke("isAlpha", code, null, to);
+                    result = _engine.Invoke("emmetIsAlpha", code, null, to);
                 else
-                    result = _engine.Invoke("isAlpha", code, from, to);
+                    result = _engine.Invoke("emmetIsAlpha", code, from, to);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return false;
@@ -85,7 +85,7 @@ namespace EmmetNetSharp.Services
 
             try
             {
-                var result = _engine.Invoke("isAlphaNumeric", code);
+                var result = _engine.Invoke("emmetIsAlphaNumeric", code);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return false;
@@ -113,7 +113,7 @@ namespace EmmetNetSharp.Services
 
             try
             {
-                var result = _engine.Invoke("isAlphaNumericWord", code);
+                var result = _engine.Invoke("emmetIsAlphaNumericWord", code);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return false;
@@ -141,7 +141,7 @@ namespace EmmetNetSharp.Services
 
             try
             {
-                var result = _engine.Invoke("isAlphaWord", code);
+                var result = _engine.Invoke("emmetIsAlphaWord", code);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return false;
@@ -169,7 +169,7 @@ namespace EmmetNetSharp.Services
 
             try
             {
-                var result = _engine.Invoke("isNumber", code);
+                var result = _engine.Invoke("emmetIsNumber", code);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return false;
@@ -197,7 +197,7 @@ namespace EmmetNetSharp.Services
 
             try
             {
-                var result = _engine.Invoke("isQuote", code);
+                var result = _engine.Invoke("emmetIsQuote", code);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return false;
@@ -225,7 +225,7 @@ namespace EmmetNetSharp.Services
 
             try
             {
-                var result = _engine.Invoke("isSpace", code);
+                var result = _engine.Invoke("emmetIsSpace", code);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return false;
@@ -253,7 +253,7 @@ namespace EmmetNetSharp.Services
 
             try
             {
-                var result = _engine.Invoke("isUmlaut", code);
+                var result = _engine.Invoke("emmetIsUmlaut", code);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return false;
@@ -281,7 +281,7 @@ namespace EmmetNetSharp.Services
 
             try
             {
-                var result = _engine.Invoke("isWhiteSpace", code);
+                var result = _engine.Invoke("emmetIsWhiteSpace", code);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return false;

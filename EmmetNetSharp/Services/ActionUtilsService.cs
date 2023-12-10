@@ -60,9 +60,9 @@ namespace EmmetNetSharp.Services
                 JsValue result;
 
                 if (options != null)
-                    result = _engine.Invoke("findTagMatch", source, position, options.ToJavaScriptObject());
+                    result = _engine.Invoke("emmetFindTagMatch", source, position, options.ToJavaScriptObject());
                 else
-                    result = _engine.Invoke("findTagMatch", source, position);
+                    result = _engine.Invoke("emmetFindTagMatch", source, position);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;
@@ -117,9 +117,9 @@ namespace EmmetNetSharp.Services
                 JsValue result;
 
                 if (includeProperties.HasValue)
-                    result = _engine.Invoke("getCSSSection", code, position, includeProperties);
+                    result = _engine.Invoke("emmetGetCSSSection", code, position, includeProperties);
                 else
-                    result = _engine.Invoke("getCSSSection", code, position);
+                    result = _engine.Invoke("emmetGetCSSSection", code, position);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;
@@ -198,7 +198,7 @@ namespace EmmetNetSharp.Services
 
             try
             {
-                var result = _engine.Invoke("getOpenTag", code, position);
+                var result = _engine.Invoke("emmetGetOpenTag", code, position);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;
@@ -259,9 +259,9 @@ namespace EmmetNetSharp.Services
                 JsValue result;
 
                 if (options != null)
-                    result = _engine.Invoke("getTagMatches", code, options.ToJavaScriptObject());
+                    result = _engine.Invoke("emmetGetTagMatches", code, options.ToJavaScriptObject());
                 else
-                    result = _engine.Invoke("getTagMatches", code);
+                    result = _engine.Invoke("emmetGetTagMatches", code);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;
@@ -323,9 +323,9 @@ namespace EmmetNetSharp.Services
                 JsValue result;
 
                 if (isPrev.HasValue)
-                    result = _engine.Invoke("selectItemCSS", code, position, isPrev.Value);
+                    result = _engine.Invoke("emmetSelectItemCSS", code, position, isPrev.Value);
                 else
-                    result = _engine.Invoke("selectItemCSS", code, position);
+                    result = _engine.Invoke("emmetSelectItemCSS", code, position);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;
@@ -379,9 +379,9 @@ namespace EmmetNetSharp.Services
                 JsValue result;
 
                 if (isPrev.HasValue)
-                    result = _engine.Invoke("selectItemHTML", code, position, isPrev.Value);
+                    result = _engine.Invoke("emmetSelectItemHTML", code, position, isPrev.Value);
                 else
-                    result = _engine.Invoke("selectItemHTML", code, position);
+                    result = _engine.Invoke("emmetSelectItemHTML", code, position);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;

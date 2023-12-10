@@ -59,9 +59,9 @@ namespace EmmetNetSharp.Services
                 JsValue result;
 
                 if (scannerOptions == null)
-                    result = _engine.Invoke("match", source, position);
+                    result = _engine.Invoke("emmetMatch", source, position);
                 else
-                    result = _engine.Invoke("match", source, position, scannerOptions.ToJavaScriptObject());
+                    result = _engine.Invoke("emmetMatch", source, position, scannerOptions.ToJavaScriptObject());
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;
@@ -136,9 +136,9 @@ namespace EmmetNetSharp.Services
                 JsValue result;
 
                 if (scannerOptions == null)
-                    result = _engine.Invoke("balancedInward", source, position);
+                    result = _engine.Invoke("emmetBalancedInward", source, position);
                 else
-                    result = _engine.Invoke("balancedInward", source, position, scannerOptions.ToJavaScriptObject());
+                    result = _engine.Invoke("emmetBalancedInward", source, position, scannerOptions.ToJavaScriptObject());
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;
@@ -201,9 +201,9 @@ namespace EmmetNetSharp.Services
                 JsValue result;
 
                 if (scannerOptions == null)
-                    result = _engine.Invoke("balancedOutward", source, position);
+                    result = _engine.Invoke("emmetBalancedOutward", source, position);
                 else
-                    result = _engine.Invoke("balancedOutward", source, position, scannerOptions.ToJavaScriptObject());
+                    result = _engine.Invoke("emmetBalancedOutward", source, position, scannerOptions.ToJavaScriptObject());
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;
@@ -260,9 +260,9 @@ namespace EmmetNetSharp.Services
                 JsValue result;
 
                 if (string.IsNullOrWhiteSpace(name))
-                    result = _engine.Invoke("attributes", source);
+                    result = _engine.Invoke("emmetAttributes", source);
                 else
-                    result = _engine.Invoke("attributes", source, name);
+                    result = _engine.Invoke("emmetAttributes", source, name);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;
@@ -339,9 +339,9 @@ namespace EmmetNetSharp.Services
             try
             {
                 if (scannerOptions == null)
-                    _engine.Invoke("scan", source, scanCallback);
+                    _engine.Invoke("emmetScan", source, scanCallback);
                 else
-                    _engine.Invoke("scan", source, scanCallback, scannerOptions.ToJavaScriptObject());
+                    _engine.Invoke("emmetScan", source, scanCallback, scannerOptions.ToJavaScriptObject());
 
                 return scanResults.ToArray();
             }

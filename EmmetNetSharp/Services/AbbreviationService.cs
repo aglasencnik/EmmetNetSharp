@@ -53,9 +53,9 @@ namespace EmmetNetSharp.Services
                 JsValue result;
 
                 if (config != null)
-                    result = _engine.Invoke("expandAbbreviation", abbreviation, config.ToJavaScriptObject());
+                    result = _engine.Invoke("emmetExpandAbbreviation", abbreviation, config.ToJavaScriptObject());
                 else
-                    result = _engine.Invoke("expandAbbreviation", abbreviation);
+                    result = _engine.Invoke("emmetExpandAbbreviation", abbreviation);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;
@@ -90,13 +90,13 @@ namespace EmmetNetSharp.Services
                 JsValue result;
 
                 if (position != null && options != null)
-                    result = _engine.Invoke("extract", line, position, options.ToJavaScriptObject());
+                    result = _engine.Invoke("emmetExtractAbbreviation", line, position, options.ToJavaScriptObject());
                 else if (position != null)
-                    result = _engine.Invoke("extract", line, position);
+                    result = _engine.Invoke("emmetExtractAbbreviation", line, position);
                 else if (options != null)
-                    result = _engine.Invoke("extract", line, JsValue.Null, options.ToJavaScriptObject());
+                    result = _engine.Invoke("emmetExtractAbbreviation", line, JsValue.Null, options.ToJavaScriptObject());
                 else
-                    result = _engine.Invoke("extract", line);
+                    result = _engine.Invoke("emmetExtractAbbreviation", line);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;
@@ -137,9 +137,9 @@ namespace EmmetNetSharp.Services
                 JsValue result;
 
                 if (config != null)
-                    result = _engine.Invoke("markup", abbreviation, config.ToJavaScriptObject());
+                    result = _engine.Invoke("emmetExpandMarkup", abbreviation, config.ToJavaScriptObject());
                 else
-                    result = _engine.Invoke("markup", abbreviation);
+                    result = _engine.Invoke("emmetExpandMarkup", abbreviation);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;
@@ -172,9 +172,9 @@ namespace EmmetNetSharp.Services
                 JsValue result;
 
                 if (config != null)
-                    result = _engine.Invoke("stylesheet", abbreviation, config.ToJavaScriptObject());
+                    result = _engine.Invoke("emmetExpandStylesheet", abbreviation, config.ToJavaScriptObject());
                 else
-                    result = _engine.Invoke("stylesheet", abbreviation);
+                    result = _engine.Invoke("emmetExpandStylesheet", abbreviation);
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;
