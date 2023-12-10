@@ -1,4 +1,6 @@
-﻿namespace EmmetNetSharp.Models
+﻿using System.Collections.Generic;
+
+namespace EmmetNetSharp.Models
 {
     /// <summary>
     /// Represents the BaseScannerOptions class.
@@ -8,21 +10,36 @@
         /// <summary>
         /// Gets or sets the type of the scanner.
         /// </summary>
-        public bool xml { get; set; }
+        public bool Xml { get; set; }
 
         /// <summary>
         /// Gets or sets the list of tags that should have special parsing rules.
         /// </summary>
-        public string[] special { get; set; }
+        public string[] Special { get; set; }
 
         /// <summary>
         /// Gets or sets the list of elements that should be treated as empty.
         /// </summary>
-        public string[] empty { get; set; }
+        public string[] Empty { get; set; }
 
         /// <summary>
         /// Gets or sets whether it should return all tokens.
         /// </summary>
-        public bool allTokens { get; set; }
+        public bool AllTokens { get; set; }
+
+        /// <summary>
+        /// Converts the object to a JavaScript object.
+        /// </summary>
+        /// <returns>Dictionary containing the object's properties and values.</returns>
+        public Dictionary<string, object> ToJavaScriptObject()
+        {
+            return new Dictionary<string, object>
+            {
+                { "xml", Xml },
+                { "special", Special },
+                { "empty", Empty },
+                { "allTokens", AllTokens}
+            };
+        }
     }
 }

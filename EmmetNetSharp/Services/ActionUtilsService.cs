@@ -1,5 +1,4 @@
 ﻿using EmmetNetSharp.Enums;
-using EmmetNetSharp.Helpers;
 using EmmetNetSharp.Interfaces;
 using EmmetNetSharp.Models;
 using Jint;
@@ -60,10 +59,8 @@ namespace EmmetNetSharp.Services
             {
                 JsValue result;
 
-                var partialOptions = PartialHelper.GetPartialObject(options);
-
-                if (partialOptions != null)
-                    result = _engine.Invoke("findTagMatch", source, position, partialOptions);
+                if (options != null)
+                    result = _engine.Invoke("findTagMatch", source, position, options.ToJavaScriptObject());
                 else
                     result = _engine.Invoke("findTagMatch", source, position);
 
@@ -261,10 +258,8 @@ namespace EmmetNetSharp.Services
             {
                 JsValue result;
 
-                var partialOptions = PartialHelper.GetPartialObject(options);
-
-                if (partialOptions != null)
-                    result = _engine.Invoke("getTagMatches", code, partialOptions);
+                if (options != null)
+                    result = _engine.Invoke("getTagMatches", code, options.ToJavaScriptObject());
                 else
                     result = _engine.Invoke("getTagMatches", code);
 

@@ -78,7 +78,7 @@ public class MatchTests
     public void Test_Xml()
     {
         // Should match <img> tag, since we’re in XML mode, matcher should look for closing `</img>` tag
-        var tag1 = _htmlMatcherService.Match(_xml, 42, new HtmlMatcherScannerOptions { xml = true });
+        var tag1 = _htmlMatcherService.Match(_xml, 42, new HtmlMatcherScannerOptions { Xml = true });
         var tag1AttributesJson = JsonConvert.SerializeObject(tag1.Attributes);
         var tag1ExpectedAttributesJson = JsonConvert.SerializeObject(new[]
         {
@@ -97,7 +97,7 @@ public class MatchTests
         Assert.Equal((37, 56), tag1.OpeningTagRange);
         Assert.Equal((99, 105), tag1.ClosingTagRange);
 
-        var tag2 = _htmlMatcherService.Match(_xml, 70, new HtmlMatcherScannerOptions { xml = true });
+        var tag2 = _htmlMatcherService.Match(_xml, 70, new HtmlMatcherScannerOptions { Xml = true });
         var tag2AttributesJson = JsonConvert.SerializeObject(tag2.Attributes);
         var tag2ExpectedAttributesJson = JsonConvert.SerializeObject(new[]
         {

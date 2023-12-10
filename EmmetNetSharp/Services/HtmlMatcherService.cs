@@ -1,5 +1,4 @@
 ﻿using EmmetNetSharp.Enums;
-using EmmetNetSharp.Helpers;
 using EmmetNetSharp.Interfaces;
 using EmmetNetSharp.Models;
 using Jint;
@@ -59,12 +58,10 @@ namespace EmmetNetSharp.Services
             {
                 JsValue result;
 
-                var partialOptions = PartialHelper.GetPartialObject(scannerOptions);
-
-                if (partialOptions == null)
+                if (scannerOptions == null)
                     result = _engine.Invoke("match", source, position);
                 else
-                    result = _engine.Invoke("match", source, position, partialOptions);
+                    result = _engine.Invoke("match", source, position, scannerOptions.ToJavaScriptObject());
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;
@@ -138,12 +135,10 @@ namespace EmmetNetSharp.Services
             {
                 JsValue result;
 
-                var partialOptions = PartialHelper.GetPartialObject(scannerOptions);
-
-                if (partialOptions == null)
+                if (scannerOptions == null)
                     result = _engine.Invoke("balancedInward", source, position);
                 else
-                    result = _engine.Invoke("balancedInward", source, position, partialOptions);
+                    result = _engine.Invoke("balancedInward", source, position, scannerOptions.ToJavaScriptObject());
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;
@@ -205,12 +200,10 @@ namespace EmmetNetSharp.Services
             {
                 JsValue result;
 
-                var partialOptions = PartialHelper.GetPartialObject(scannerOptions);
-
-                if (partialOptions == null)
+                if (scannerOptions == null)
                     result = _engine.Invoke("balancedOutward", source, position);
                 else
-                    result = _engine.Invoke("balancedOutward", source, position, partialOptions);
+                    result = _engine.Invoke("balancedOutward", source, position, scannerOptions.ToJavaScriptObject());
 
                 if (result is null || result.IsUndefined() || result.IsNull())
                     return null;
@@ -345,12 +338,10 @@ namespace EmmetNetSharp.Services
 
             try
             {
-                var partialOptions = PartialHelper.GetPartialObject(scannerOptions);
-
-                if (partialOptions == null)
+                if (scannerOptions == null)
                     _engine.Invoke("scan", source, scanCallback);
                 else
-                    _engine.Invoke("scan", source, scanCallback, partialOptions);
+                    _engine.Invoke("scan", source, scanCallback, scannerOptions.ToJavaScriptObject());
 
                 return scanResults.ToArray();
             }
