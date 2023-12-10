@@ -56,7 +56,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Jint" Version="3.0.0-beta-2055" />
+    <PackageReference Include="Jint" Version="3.0.0-beta-2057" />
   </ItemGroup>
 
   <ItemGroup>
