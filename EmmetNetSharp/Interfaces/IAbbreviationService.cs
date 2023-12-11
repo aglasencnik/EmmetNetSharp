@@ -32,29 +32,5 @@ namespace EmmetNetSharp.Interfaces
         /// <exception cref="ArgumentNullException">Thrown when the 'line' parameter is null or whitespace.</exception>
         /// <exception cref="Exception">Thrown when an error occurs during the extraction process.</exception>
         ExtractedAbbreviation ExtractAbbreviation(string line, int? position = null, AbbreviationExtractOptions options = null);
-
-        /// <summary>
-        /// Expands a given markup abbreviation into its full form based on the provided abbreviation configuration.
-        /// </summary>
-        /// <param name="abbreviation">The markup abbreviation to be expanded. Cannot be null or whitespace.</param>
-        /// <param name="config">Optional. The configuration for abbreviation expansion. If null, default settings are used.</param>
-        /// <returns>
-        /// The expanded form of the markup abbreviation as a string, or null if the expansion process fails or no expansion is found.
-        /// </returns>
-        /// <exception cref="ArgumentNullException">Thrown when the 'abbreviation' parameter is null or whitespace.</exception>
-        /// <exception cref="Exception">Thrown when an error occurs during the markup abbreviation expansion process.</exception>
-        string ExpandMarkupAbbreviation(string abbreviation, AbbreviationConfig config = null);
-
-        /// <summary>
-        /// Expands a given stylesheet abbreviation into its full form based on the provided abbreviation configuration.
-        /// </summary>
-        /// <param name="abbreviation">The stylesheet abbreviation to be expanded. Cannot be null or whitespace.</param>
-        /// <param name="config">Optional. The configuration for abbreviation expansion. If null, default settings are used.</param>
-        /// <returns>
-        /// The expanded form of the stylesheet abbreviation as a string, or null if the expansion process fails or no expansion is found.
-        /// </returns>
-        /// <exception cref="ArgumentNullException">Thrown when the 'abbreviation' parameter is null or whitespace.</exception>
-        /// <exception cref="Exception">Thrown when an error occurs during the stylesheet abbreviation expansion process.</exception>
-        string ExpandStylesheetAbbreviation(string abbreviation, AbbreviationConfig config = null);
     }
 }
