@@ -1,5 +1,7 @@
 # EmmetNetSharp
 
+[![NuGet version (EmmetNetSharp)](https://img.shields.io/nuget/v/EmmetNetSharp.svg?style=flat-square)](https://www.nuget.org/packages/EmmetNetSharp/)
+
 EmmetNetSharp: Seamlessly integrate Emmet's HTML/CSS toolkit into your C# development with this powerful NuGet package. Elevate your coding efficiency and streamline web development in C#.
 
 ## Installation
