@@ -10,10 +10,10 @@
 		<Copyright>Copyright (c) Amadej Glasenčnik 2023.</Copyright>
 		<PackageProjectUrl>https://github.com/aglasencnik/EmmetNetSharp</PackageProjectUrl>
 		<PackageId>EmmetNetSharp</PackageId>
-		<PackageIcon>Resources\Icon.png</PackageIcon>
+		<PackageIcon>Icon.png</PackageIcon>
 		<RepositoryUrl>https://github.com/aglasencnik/EmmetNetSharp</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
-		<PackageReadmeFile>Resources\README.md</PackageReadmeFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageTags>CSS, HTML, Productivity, Snippets, Tools, Emmet, WebDevelopment</PackageTags>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -29,10 +29,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Content Include="Resources\Icon.png">
+		<Content Include="Icon.png">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</Content>
-		<Content Include="Resources\README.md">
+		<Content Include="README.md">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</Content>
 		<Content Include="Scripts\actionUtils.min.js">
@@ -60,11 +60,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Update="Resources\Icon.png">
+		<None Update="Icon.png">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
-		<None Update="Resources\README.md">
+		<None Update="README.md">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>

@@ -206,8 +206,6 @@ Take a look at the source code to learn more.
 
 If you find this project useful, consider supporting it by [buying me a coffee](https://www.buymeacoffee.com/aglasencnik). Your support is greatly appreciated!
 
-<a href="https://www.buymeacoffee.com/aglasencnik" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
-
 ## Contributing
 
 Contributions are welcome! If you have a feature to propose or a bug to fix, create a new pull request.
