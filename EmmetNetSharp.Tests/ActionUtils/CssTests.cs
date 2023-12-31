@@ -13,7 +13,7 @@ public class CssTests
     [Fact]
     public void Test_SelectNextItem()
     {
-        var code = File.ReadAllText(Path.Combine("Assets", "actionUtilsSample.scss")) ?? string.Empty;
+        var code = File.ReadAllText(Path.Combine("Assets", "actionUtilsSample.scss")).Replace("\r\n", "\n") ?? string.Empty;
 
         var case1ActualJson = JsonConvert.SerializeObject(_actionUtilsService.SelectItemCss(code, 0));
         var case1ExpectedJson = JsonConvert.SerializeObject(new ActionUtilsSelectItemModel
@@ -73,7 +73,7 @@ public class CssTests
     [Fact]
     public void Test_SelectPreviousItem()
     {
-        var code = File.ReadAllText(Path.Combine("Assets", "actionUtilsSample.scss")) ?? string.Empty;
+        var code = File.ReadAllText(Path.Combine("Assets", "actionUtilsSample.scss")).Replace("\r\n", "\n") ?? string.Empty;
 
         // list-style-type: none;
         var case1ActualJson = JsonConvert.SerializeObject(_actionUtilsService.SelectItemCss(code, 70, true));
@@ -123,7 +123,7 @@ public class CssTests
     [Fact]
     public void Test_GetSection()
     {
-        var code = File.ReadAllText(Path.Combine("Assets", "actionUtilsSample.scss")) ?? string.Empty;
+        var code = File.ReadAllText(Path.Combine("Assets", "actionUtilsSample.scss")).Replace("\r\n", "\n") ?? string.Empty;
 
         var case1ActualJson = JsonConvert.SerializeObject(_actionUtilsService.GetCssSection(code, 260));
         var case1ExpectedJson = JsonConvert.SerializeObject(new ActionUtilsCssSection
@@ -149,7 +149,7 @@ public class CssTests
     [Fact]
     public void Test_GetSectionWithProps()
     {
-        var code = File.ReadAllText(Path.Combine("Assets", "actionUtilsSample.scss")) ?? string.Empty;
+        var code = File.ReadAllText(Path.Combine("Assets", "actionUtilsSample.scss")).Replace("\r\n", "\n") ?? string.Empty;
 
         // Case 1
         var case1Section = _actionUtilsService.GetCssSection(code, 207, true);

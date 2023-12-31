@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 
 namespace EmmetNetSharp.Services
 {
@@ -27,7 +28,8 @@ namespace EmmetNetSharp.Services
         {
             _engine = new Engine();
 
-            var code = File.ReadAllText(Path.Combine(PackageDefaults.ScriptsFolderPath, PackageDefaults.HtmlMatcherScriptPath));
+            var assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            var code = File.ReadAllText(Path.Combine(assemblyPath, PackageDefaults.ScriptsFolderPath, PackageDefaults.HtmlMatcherScriptPath));
             _engine.Execute(code ?? string.Empty);
         }
 

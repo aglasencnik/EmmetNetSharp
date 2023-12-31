@@ -14,7 +14,7 @@ public class MatchTests
     [Fact]
     public void Test_MatchSelector()
     {
-        var code = File.ReadAllText(Path.Combine("Assets", "cssMatcherSample.scss")) ?? string.Empty;
+        var code = File.ReadAllText(Path.Combine("Assets", "cssMatcherSample.scss")).Replace("\r\n", "\n") ?? string.Empty;
 
         var expectedJson1 = JsonConvert.SerializeObject(new CssMatchResult
         {
@@ -41,7 +41,7 @@ public class MatchTests
     [Fact]
     public void Test_Property()
     {
-        var code = File.ReadAllText(Path.Combine("Assets", "cssMatcherSample.scss")) ?? string.Empty;
+        var code = File.ReadAllText(Path.Combine("Assets", "cssMatcherSample.scss")).Replace("\r\n", "\n") ?? string.Empty;
 
         var expectedJson = JsonConvert.SerializeObject(new CssMatchResult
         {

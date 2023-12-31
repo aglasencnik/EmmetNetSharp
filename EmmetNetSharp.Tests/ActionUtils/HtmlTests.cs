@@ -14,7 +14,7 @@ public class HtmlTests
     [Fact]
     public void Test_SelectNextItem()
     {
-        var code = File.ReadAllText(Path.Combine("Assets", "actionUtilsSample.html")) ?? string.Empty;
+        var code = File.ReadAllText(Path.Combine("Assets", "actionUtilsSample.html")).Replace("\r\n", "\n") ?? string.Empty;
 
         // `<li class="item item_1">`: select tag name, full attribute, attribute, value and class names
         var case1ActualJson = JsonConvert.SerializeObject(_actionUtilsService.SelectItemHtml(code, 9));
@@ -54,7 +54,7 @@ public class HtmlTests
     [Fact]
     public void Test_SelectPreviousItem()
     {
-        var code = File.ReadAllText(Path.Combine("Assets", "actionUtilsSample.html")) ?? string.Empty;
+        var code = File.ReadAllText(Path.Combine("Assets", "actionUtilsSample.html")).Replace("\r\n", "\n") ?? string.Empty;
 
         // <a href="/sample"  title={expr}>
         var case1ActualJson = JsonConvert.SerializeObject(_actionUtilsService.SelectItemHtml(code, 80, true));
@@ -94,7 +94,7 @@ public class HtmlTests
     [Fact]
     public void Test_GetOpenTag()
     {
-        var code = File.ReadAllText(Path.Combine("Assets", "actionUtilsSample.html")) ?? string.Empty;
+        var code = File.ReadAllText(Path.Combine("Assets", "actionUtilsSample.html")).Replace("\r\n", "\n") ?? string.Empty;
 
         var case1ActualJson = JsonConvert.SerializeObject(_actionUtilsService.GetOpenTag(code, 60));
         var case1ExpectedJson = JsonConvert.SerializeObject(new ActionUtilsContextTag 
