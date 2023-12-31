@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Version>1.0.0</Version>
+		<Version>1.0.1</Version>
 		<Title>EmmetNetSharp</Title>
 		<Authors>Amadej Glasenčnik</Authors>
 		<Description>EmmetNetSharp: Seamlessly integrate Emmet's HTML/CSS toolkit into your C# development with this powerful NuGet package. Elevate your coding efficiency and streamline web development in C#.</Description>
