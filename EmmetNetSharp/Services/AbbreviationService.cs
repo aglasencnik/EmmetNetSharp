@@ -5,6 +5,7 @@ using Jint.Native;
 using System;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 
 namespace EmmetNetSharp.Services
 {
@@ -25,7 +26,8 @@ namespace EmmetNetSharp.Services
         {
             _engine = new Engine();
 
-            var code = File.ReadAllText(Path.Combine(PackageDefaults.ScriptsFolderPath, PackageDefaults.AbbreviationScriptPath));
+            var assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            var code = File.ReadAllText(Path.Combine(assemblyPath, PackageDefaults.ScriptsFolderPath, PackageDefaults.AbbreviationScriptPath));
             _engine.Execute(code ?? string.Empty);
         }
 
