@@ -10,7 +10,7 @@ public class BalanceTests
     [Fact]
     public void Test_Outward()
     {
-        var code = File.ReadAllText(Path.Combine("Assets", "cssMatcherSample.scss")) ?? string.Empty;
+        var code = File.ReadAllText(Path.Combine("Assets", "cssMatcherSample.scss")).Replace("\r\n", "\n") ?? string.Empty;
 
         Assert.Equal(new[]
         {
@@ -43,7 +43,7 @@ public class BalanceTests
     [Fact]
     public void Test_Inward()
     {
-        var code = File.ReadAllText(Path.Combine("Assets", "cssMatcherSample.scss")) ?? string.Empty;
+        var code = File.ReadAllText(Path.Combine("Assets", "cssMatcherSample.scss")).Replace("\r\n", "\n") ?? string.Empty;
 
         Assert.Equal(new[]
         {

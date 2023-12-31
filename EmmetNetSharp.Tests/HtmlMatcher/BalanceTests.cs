@@ -13,7 +13,7 @@ public class BalanceTests
     [Fact]
     public void Test_Inward()
     {
-        var code = File.ReadAllText(Path.Combine("Assets", "htmlMatcherSample.html")) ?? string.Empty;
+        var code = File.ReadAllText(Path.Combine("Assets", "htmlMatcherSample.html")).Replace("\r\n", "\n") ?? string.Empty;
 
         var case1ActualJson = JsonConvert.SerializeObject(_htmlMatcherService.BalanceInward(code, 0));
         var case1ExpectedJson = JsonConvert.SerializeObject(new[]
@@ -101,7 +101,7 @@ public class BalanceTests
     [Fact]
     public void Test_Outward()
     {
-        var code = File.ReadAllText(Path.Combine("Assets", "htmlMatcherSample.html")) ?? string.Empty;
+        var code = File.ReadAllText(Path.Combine("Assets", "htmlMatcherSample.html")).Replace("\r\n", "\n") ?? string.Empty;
 
         var case1ActualJson = JsonConvert.SerializeObject(_htmlMatcherService.BalanceOutward(code, 0));
         var case1ExpectedJson = JsonConvert.SerializeObject(Array.Empty<HtmlBalancedTag>());
